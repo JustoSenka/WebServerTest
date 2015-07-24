@@ -37,7 +37,7 @@ public class IndexController {
 	}
 
 	@RequestMapping(value = "getp", produces = { "application/json" }, method = RequestMethod.GET)
-	public @ResponseBody Point3D getPoint(ModelMap model) {
+	public @ResponseBody String getPoint(ModelMap model) {
 		
 		Point3D p = new Point3D(1, 15, 67, 158);
 		String str = "";
@@ -49,7 +49,7 @@ public class IndexController {
 			e.printStackTrace();
 		}
 		
-		return p;
+		return str;
 	}
 /*
 	@RequestMapping(value = "postp", method = RequestMethod.POST)
